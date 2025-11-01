@@ -93,11 +93,12 @@ gallery.append(...items);
 
 // Click + event delegation + Lightbox lib //
 gallery.addEventListener('click', (e) => {
-const link = e.target.closest(`.gallery-link`);
-if (!link) return;
-e.preventDefault();
+if (!e.target.matches('img.gallery-image')) return;
 
-const img = link.querySelector(`img`);
+const img = e.target;
+const link = img.closest('.gallery-link');
+if (link) e.preventDefault();
+
 const largeUrl = img.dataset.source;
 const instance = basicLightbox.create(`<img src="${largeUrl}" width="800" height="600">`);
 instance.show();
