@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(239, 239, 239);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 32px);
+    padding: 64px 16px;
+}
+
+.widget {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: min(100%, 360px);
+    padding: 48px;
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-surface);
+    box-shadow: 0 2px 12px rgba(46, 47, 66, 0.12);
+    text-align: center;
+}
+
+.widget > p {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 8px;
+    white-space: nowrap;
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    color: var(--color-text-primary);
+}
+
+.widget .color {
+    font-weight: 600;
+}
+
+.widget .change-color {
+    align-self: stretch;
+}
